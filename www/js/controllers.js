@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $rootScope, $http, $ionicModal, $timeout) {
 
 $rootScope.webServiceUrl = "https://anilsolmaz.com/gelinlik/webservice.php"
 
@@ -17,7 +17,7 @@ $rootScope.webServiceUrl = "https://anilsolmaz.com/gelinlik/webservice.php"
   
 })
 
-.controller('AnaCtrl', function($scope, $http, $stateParams) {
+.controller('AnaCtrl', function($scope, $rootScope, $http, $stateParams) {
   $scope.yonlendir = function(url){
     window.href.location(url)
   }
