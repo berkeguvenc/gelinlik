@@ -27,13 +27,13 @@
           button-dark
         </button>
 
-        <div class="list card" ng-repeat="veri in gelenveri | filter:ara">
+        <div class="list card" ng-repeat="veri in detaylar | filter:ara">
 
-            <div class="item item-body resim_arkaplan" style="background-image: url('{{veri.resimURL}}');">
+            <div class="item item-body resim_arkaplan" style="background-image: url('{{veri.resimURL_1}}');">
                 <div class="row">
-                    <div class="col col-33">
+                    <div class="col col-50">
                         <label class="label_tasarim">
-                      2019 sezon
+                      {{veri.sezon}} sezon
                   </label>
                     </div>
                     <div class="col" style="height: 350px;"></div>
@@ -42,25 +42,24 @@
                 <div class="row">
                     <div class="col col-50" style="height: 50px;">
                         <label class="label_tasarim">
-                        ABC Gelinlik
+                        {{veri.firma}}
                     </label>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col col-33">
+                    <div class="col col-50">
                         <label class="label_tasarim">
-                      3500 tl
+                      {{veri.fiyat}} tl
                   </label>
                     </div>
                     <div class="col col-33 col-offset-33"></div>
                 </div>
 
             </div>
-            <div style="background-color: black;">
-                <label style="color: white; padding: 20px; text-align: justify;">
-              Ürünler içerisinde saten ve özel nazar boncukları kullanılmıştır.
-            </label>
+            <div class="urun_acikmala">
+
+                {{veri.aciklama}}
             </div>
 
         </div>

@@ -18,6 +18,14 @@
     color: white;
 }
 
+.urun_acikmala {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-align: justify
+}
+
 .bosluk {
     margin: 10px;
 }
@@ -26,6 +34,6 @@
     margin-top: 100px;
 }
 
-.ortala {
+.ortala {
     text-align: center;
 }
