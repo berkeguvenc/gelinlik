@@ -1,7 +1,46 @@
 <ion-view view-title="Gelinlik Detay">
   <ion-content>
 
-  	Gelinlik detay
-  	
+
+  	<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+    <div class="box item">
+		<div class="resim_arkaplan" style="background-image: url('{{detaylar[urunId].resimURL_1}}');">
+			<label class="ust_bosluk label_tasarim"> {{detaylar[urunId].sezon}} Sezon </label>
+		</div>
+    </div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box item">
+		<div class="resim_arkaplan" style="background-image: url('{{detaylar[urunId].resimURL_2}}');">
+			<label class="ust_bosluk label_tasarim"> {{detaylar[urunId].sezon}} Sezon </label>
+		</div>
+    </div>
+  </ion-slide>
+  <ion-slide>
+     <div class="box item">
+		<div class="resim_arkaplan" style="background-image: url('{{detaylar[urunId].resimURL_3}}');">
+			<label class="ust_bosluk label_tasarim"> {{detaylar[urunId].sezon}} Sezon </label>
+		</div>
+    </div>
+  </ion-slide>
+</ion-slide-box>
+
+<div>
+	<label></label>
+	<label></label>
+</div>
+		
+
+		<div class="bosluk">
+			{{detaylar[urunId].aciklama}}
+		</div>
+
+
+		
+	</div>
+	<div class="ortala">
+		<button class="label_tasarim"> Sayfayı Ziyaret Et</button>
+  	</div>
   </ion-content>
 </ion-view>
