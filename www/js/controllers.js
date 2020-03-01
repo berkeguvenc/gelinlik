@@ -33,7 +33,7 @@ $rootScope.webServiceUrl = "https://anilsolmaz.com/gelinlik/webservice.php"
 
 
     $scope.openlink = function(link) {
-      $cordovaInAppBrowser.open(link, '_blank', options)
+        window.open(link, "_blank", "location=yes")
         .then(function(event) {
           // success
         })

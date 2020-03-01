@@ -13,11 +13,13 @@
   "dependencies": {
     "@capacitor/core": "1.5.0",
     "@ionic-native/in-app-browser": "^5.22.0",
-    "cordova-plugin-inappbrowser": "^3.2.0"
+    "cordova-plugin-inappbrowser": "^3.2.0",
+    "cordova-plugin-x-socialsharing": "^5.0.11"
   },
   "cordova": {
     "plugins": {
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-x-socialsharing": {}
     }
   }
 }
