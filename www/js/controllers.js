@@ -22,7 +22,7 @@ $rootScope.webServiceUrl = "https://anilsolmaz.com/gelinlik/webservice.php"
     window.href.location(url)
   }
 
-  $scope.deneme = $stateParams.detayId
+  $scope.urunId = $stateParams.detayId
 
  var Service
 });
