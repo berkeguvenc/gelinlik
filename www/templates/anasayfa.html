@@ -23,11 +23,11 @@
           button-dark
         </button>
 
-        <button class="button button-dark">
+        <button class="button button-dark" >
           button-dark
         </button>
 
-        <div class="list card" ng-repeat="veri in detaylar | filter:ara">
+        <div class="list card" ng-repeat="veri in detaylar | filter:ara" ng-click="yonlendir('#/app/detay/'+$index)">
 
             <div class="item item-body resim_arkaplan" style="background-image: url('{{veri.resimURL_1}}');">
                 <div class="row">

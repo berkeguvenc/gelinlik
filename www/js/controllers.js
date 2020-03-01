@@ -19,7 +19,7 @@ $rootScope.webServiceUrl = "https://anilsolmaz.com/gelinlik/webservice.php"
 
 .controller('AnaCtrl', function($scope, $rootScope, $http, $stateParams) {
   $scope.yonlendir = function(url){
-    window.href.location(url)
+    window.location.assign(url)
   }
 
   $scope.urunId = $stateParams.detayId
@@ -41,6 +41,12 @@ $rootScope.webServiceUrl = "https://anilsolmaz.com/gelinlik/webservice.php"
           // error
         });
     }
+
+
+
+    $scope.shareAnywhereApp = function() {
+        $cordovaSocialSharing.share("Merhaba ben "+$rootScope.user+", BirBileneSor Mobil uygulmasını bu PROMOSYON KODU: "+$rootScope.user_id+ " ile üyelik oluştur, 300 soru sorma hakkı kazan. YKS, KPSS, DGS, TEOG sınavlarına hazırlanıyorsan BirBileneSor sana yeter. PROMOSYON KODU yeni üyelik sayfasında promosyon kod alanına yazman yeterli olacaktır BAŞARILAR.", "Bir Bilene Sor | Mobil uygulama", "https://birbilenesorun.com/assets/img/about/about1.jpg", "http://www.birbilenesor.com.tr");
+    };
 
 
 });
