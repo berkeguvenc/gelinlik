@@ -9,48 +9,21 @@ angular.module('starter.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // Form data for the login modal
-  $scope.loginData = {};
-
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
-  };
-
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
-  };
-
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };
+  
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('AnaCtrl', function($scope, $http, $stateParams) {
+  $scope.yonlendir = function(url){
+    window.href.location(url)
+  }
+
+  $scope.deneme = $stateParams.detayId
+
+  $scope.gelenveri = [
+  {"aciklama":"deneme", "resimURL":"https://i.dugun.com/gallery/g_47711/prev-w2_nisantasi-gelinlik-firmalari-ve-fiyatlari_nrAXQ64d.jpg"},
+  {"aciklama":"deneme", "resimURL":"https://i.dugun.com/gallery/g_47711/prev-w2_nisantasi-gelinlik-firmalari-ve-fiyatlari_nrAXQ64d.jpg"},
+  {"aciklama":"deneme", "resimURL":"https://cdn.olegcassini.com.tr/cicek-islemeli-dusuk-omuzlu-prenses-gelinlik-indirim-dreamon-for-oleg-cassini-8873-43-B.jpg"}, 
+  {"aciklama":"deneme", "resimURL":"https://cdn.olegcassini.com.tr/cicek-islemeli-dusuk-omuzlu-prenses-gelinlik-indirim-dreamon-for-oleg-cassini-8873-43-B.jpg"}
+  
   ];
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
 });
