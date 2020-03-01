@@ -24,5 +24,23 @@ $rootScope.webServiceUrl = "https://anilsolmaz.com/gelinlik/webservice.php"
 
   $scope.urunId = $stateParams.detayId
 
- var Service
+ var options = {
+      location: 'no',
+      clearcache: 'yes',
+      toolbar: 'no',
+      closebuttoncaption: 'KAPAT?'
+    };
+
+
+    $scope.openlink = function(link) {
+      $cordovaInAppBrowser.open(link, '_blank', options)
+        .then(function(event) {
+          // success
+        })
+        .catch(function(event) {
+          // error
+        });
+    }
+
+
 });
