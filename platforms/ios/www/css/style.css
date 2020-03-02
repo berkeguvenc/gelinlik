@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+
+.resim_arkaplan {
+    width: auto;
+    max-width: 350px;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.label_tasarim {
+    background-color: black;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+.urun_acikmala {
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    text-align: justify
+}
+
+.bosluk {
+    margin: 10px;
+}
+
+.ust_bosluk {
+    margin-top: 100px;
+}
+
+.ortala {
+    text-align: center;
+}

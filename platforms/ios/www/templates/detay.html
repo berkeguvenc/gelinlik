@@ -1,0 +1,46 @@
+<ion-view view-title="{{detaylar[urunId].firma}}">
+  <ion-content>
+
+
+  	<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+    <div class="box item">
+		<div class="resim_arkaplan" style="background-image: url('{{detaylar[urunId].resimURL_1}}');">
+			<label class="ust_bosluk label_tasarim"> {{detaylar[urunId].sezon}} Sezon </label>
+		</div>
+    </div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box item">
+		<div class="resim_arkaplan" style="background-image: url('{{detaylar[urunId].resimURL_2}}');">
+			<label class="ust_bosluk label_tasarim"> {{detaylar[urunId].sezon}} Sezon </label>
+		</div>
+    </div>
+  </ion-slide>
+  <ion-slide>
+     <div class="box item">
+		<div class="resim_arkaplan" style="background-image: url('{{detaylar[urunId].resimURL_3}}');">
+			<label class="ust_bosluk label_tasarim"> {{detaylar[urunId].sezon}} Sezon </label>
+		</div>
+    </div>
+  </ion-slide>
+</ion-slide-box>
+
+<div style="margin-top: 20px; margin-bottom: 20px">
+	<label class="label_tasarim">{{detaylar[urunId].firma}}</label>
+	<label class="label_tasarim" style="margin-left: 40%">{{detaylar[urunId].fiyat}} ₺</label>
+</div>
+		
+
+		<div class="bosluk">
+			{{detaylar[urunId].aciklama}}
+		</div>
+
+
+		
+	</div>
+	<div class="ortala" >
+		<button style="width:200px; max-width: 70%" class="label_tasarim" ng-click="openlink({{detaylar[urunId].URL}})"> Sayfayı Ziyaret Et</button>
+  	</div>
+  </ion-content>
+</ion-view>

@@ -1,68 +1,57 @@
 <ion-view view-title="Gelinlik">
-    <ion-content>
-        <div class="list list-inset">
-            <label class="item item-input">
-        <i class="icon ion-search placeholder-icon"></i>
-        <input type="text" ng-model="ara" placeholder="Search">
-        </label>
+  <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+      <i class="icon ion-search placeholder-icon"></i>
+        <input class="kenar_yumusatma" type="text" ng-model="ara" placeholder="Search">
+      </label>
+    </div>
+
+    <div>
+      <div class="wrapper">
+        <button class="buton_tasarim" ng-click="buttonFilter('2019')">
+          2019 Sezon
+        </button>
+        <button class="buton_tasarim" ng-click="buttonFilter('2020')">
+          2020 Sezon
+        </button>
+      </div>
+
+      <div class="wrapper">
+        <button class="buton_tasarim" ng-click="buttonFilter('Gelinlik')">
+          Gelinlik
+        </button>
+        <button class="buton_tasarim" ng-click="buttonFilter('Nişanlık')">
+          Nişanlık
+        </button>
+        <button class="buton_tasarim" ng-click="buttonFilter('Kınalık')">
+          Kınalık
+        </button>
+      </div>
+    </div>
+
+    <div class="list card" ng-repeat="veri in detaylar | filter:ara" ng-click="yonlendir('#/app/detay/'+$index)">
+
+      <div class="item item-body resim_arkaplan" style="background-image: url('{{veri.resimURL_1}}');">
+        <div style="margin-top: 0px">
+          <label class="label_tasarim">
+            {{veri.sezon}} Sezon
+          </label>
         </div>
-
-        <button class="button button-dark">
-          button-dark
-        </button>
-
-        <button class="button button-dark">
-          button-dark
-        </button>
-
-        <button class="button button-dark">
-          button-dark
-        </button>
-
-        <button class="button button-dark">
-          button-dark
-        </button>
-
-        <button class="button button-dark">
-          button-dark
-        </button>
-
-        <div class="list card" ng-repeat="veri in detaylar | filter:ara">
-
-            <div class="item item-body resim_arkaplan" style="background-image: url('{{veri.resimURL_1}}');">
-                <div class="row">
-                    <div class="col col-50">
-                        <label class="label_tasarim">
-                      {{veri.sezon}} sezon
-                  </label>
-                    </div>
-                    <div class="col" style="height: 350px;"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-50" style="height: 50px;">
-                        <label class="label_tasarim">
-                        {{veri.firma}}
-                    </label>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col col-50">
-                        <label class="label_tasarim">
-                      {{veri.fiyat}} tl
-                  </label>
-                    </div>
-                    <div class="col col-33 col-offset-33"></div>
-                </div>
-
-            </div>
-            <div class="urun_acikmala">
-
-                {{veri.aciklama}}
-            </div>
-
+        <div style="margin-top: 350px">
+          <label class="label_tasarim">
+            {{veri.firma}}
+          </label>
         </div>
-
-    </ion-content>
+        <div style="margin-top: 15px">
+          <label class="label_tasarim">
+            {{veri.fiyat | currency : "₺" : 0}}
+          </label>
+        </div>
+      </div>
+      <div class="urun_aciklama">
+        {{veri.aciklama}}
+      </div>
+    </div>
+  </ion-content>
 </ion-view>
