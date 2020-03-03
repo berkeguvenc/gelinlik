@@ -2,7 +2,7 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $rootScope, $http, $ionicModal, $timeout) {
 
-$rootScope.webServiceUrl = "https://anilsolmaz.com/gelinlik/webservice.php"
+$rootScope.webServiceUrl = "https://app2.setrinur.net/webservice.php"
 
         var ServiceRequest = {
             service_type: "detaylar"
